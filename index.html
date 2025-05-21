@@ -7,29 +7,50 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+		</style>
 	</head>
-	<body>
-		<main>
-			<section>
-				<div>
-					<!-- Image -->
-					<div></div>
-					<!-- Titles -->
+	<body
+		style="width: 80%; margin: auto; background-color: rgb(246, 246, 246)"
+	>
+		<main style="width: 100%">
+			<section style="width: 100%">
+				<div
+					style="
+						width: 100%;
+						background-color: white;
+						padding: 20px;
+						border-radius: 10px;
+					"
+				>
 					<div>
-						<h1>Hello I'm Joseph Gitau</h1>
-						<p>TypeScript Developer, Freelancer</p>
+						<!-- Image -->
 						<div>
-							<!-- Green Pulse Button -->
-							<span></span>
-							Available for hire
+							<!-- <img src="./images/GITAU.jpg" alt="Image of Me"> -->
 						</div>
+						<!-- Titles -->
 						<div>
-							<span></span>
-							<span>Nairobi, Kenya</span>
+							<h1>Hello I'm Joseph Gitau</h1>
+							<p>TypeScript Developer, Freelancer</p>
+							<div>
+								<!-- Green Pulse Button -->
+								<span></span>
+								Available for hire
+							</div>
+							<div>
+								<span></span>
+								<span>Nairobi, Kenya</span>
+							</div>
 						</div>
 					</div>
+					<div></div>
 				</div>
-				<div>
+				<div style="display: none">
 					<ul>
 						<li>
 							<span>email</span>
@@ -220,12 +241,25 @@
 							></textarea>
 						</div>
 						<div>
-							<input type="submit" value="Submit">
+							<input
+								type="submit"
+								value="Submit"
+							/>
 						</div>
 					</form>
 				</section>
 			</section>
 		</main>
-		<footer></footer>
+		<footer>
+			<p>All rights reserved</p>
+			<p id="copy"></p>
+		</footer>
+		<script>
+			const copy = document.getElementById('copy');
+			const date = new Date();
+			const year = date.getFullYear();
+			copy.innerHTML = `&copy; ${year} Joseph Gitau`;
+			copy.style.color = 'green';
+		</script>
 	</body>
 </html>
